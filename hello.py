@@ -12,3 +12,5 @@ print('合計金額は' + str(total) + '円です。');
 testbox = ['apple','orange','banana'];
 
 print('1つ目の箱の中に入っているのは' + testbox[0] + 'です。');
+
+print('最後の行です');
