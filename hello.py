@@ -2,7 +2,7 @@
 print("Hello Python World!!")
 #print(1 + 2)
 
-price = 500;
+price = 510;
 count = input("数字を入力してください：");
 
 total = price * int(count);
