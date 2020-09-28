@@ -17,3 +17,6 @@ print('箱の中にgrapeを追加します');
 print('変更前：' + str(testbox));
 testbox.append('grape');
 print('変更後：' + str(testbox));
+
+for test in testbox:
+    print('箱の中は' + test + 'です。');
