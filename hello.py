@@ -1,14 +1,16 @@
-# utils.pyをモジュールとして読み込んでください
-import utils;
+# モジュール読み込み
+import utils
+import random
 
 print('じゃんけんをはじめます')
 player_name = input('名前を入力してください：')
 print('何を出しますか？（0: グー, 1: チョキ, 2: パー）')
+
 player_hand = int(input('数字で入力してください：'))
+computer_hand = random.randint(0,2)
 
 # utilsモジュール内の関数validateを呼び出してください
 if utils.validate(player_hand):
-    computer_hand = 1
 
     if player_name == '':
         # utilsモジュール内の関数print_handを呼び出してください
