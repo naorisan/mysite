@@ -1,20 +1,27 @@
-#この行はコメントです。
-print(1 + 2);
-price = 510;
-count = input('数字を入力してください：');
+# utils.pyをモジュールとして読み込んでください
+import utils;
 
-total = price * int(count);
+print('じゃんけんをはじめます')
+player_name = input('名前を入力してください：')
+print('何を出しますか？（0: グー, 1: チョキ, 2: パー）')
+player_hand = int(input('数字で入力してください：'))
 
-print('合計金額は' + str(total) + '円です。');
+# utilsモジュール内の関数validateを呼び出してください
+if utils.validate(player_hand):
+    computer_hand = 1
 
-testbox = ['apple','orange','banana'];
+    if player_name == '':
+        # utilsモジュール内の関数print_handを呼び出してください
+        utils.print_hand(player_hand)
+    else:
+        # utilsモジュール内の関数print_handを呼び出してください
+        utils.print_hand(player_hand, player_name)
 
-print('1つ目の箱の中に入っているのは' + testbox[0] + 'です。');
+    # utilsモジュール内の関数print_handを呼び出してください
+    utils.print_hand(computer_hand, 'コンピュータ')
 
-print('箱の中にgrapeを追加します');
-print('変更前：' + str(testbox));
-testbox.append('grape');
-print('変更後：' + str(testbox));
-
-for test in testbox:
-    print('箱の中は' + test + 'です。');
+    # utilsモジュール内の関数judgeを呼び出してください
+    result = utils.judge(player_hand, computer_hand)
+    print('結果は' + result + 'でした')
+else:
+    print('正しい数値を入力してください')
