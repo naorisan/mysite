@@ -26,4 +26,4 @@ count = int(input('個数を入力してください(3つ以上で1割引): '))
 result = selected_menu.get_total_price(count)
 
 # 「 合計は〇〇円です 」となるように出力してください
-print('合計は'+ str(result) + '円です')
+print(selected_menu.name + str(count) + '個で、合計は'+ str(result) + '円です')
