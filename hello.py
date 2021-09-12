@@ -1,29 +1,15 @@
-from menu_item import MenuItem
+# Food クラスと Drink クラスをそれぞれ読み込んでください
+from food import Food
+from drink import Drink
 
-menu_item1 = MenuItem('サンドイッチ', 500)
-menu_item2 = MenuItem('チョコケーキ', 400)
-menu_item3 = MenuItem('コーヒー', 300)
-menu_item4 = MenuItem('オレンジジュース', 200)
+# Food クラスのインスタンスを生成して変数 food1 に代入してください
+food1 = Food('サンドイッチ',500)
 
-menu_items = [menu_item1, menu_item2, menu_item3, menu_item4]
+# food1 に対して info メソッドを呼び出して戻り値を出力してください
+print(food1.info())
 
-index = 0
+# Drink クラスのインスタンスを生成して変数 drink1 に代入してください
+drink1 = Drink('コーヒー',300)
 
-for item in menu_items:
-    print(str(index) + '. ' + item.info())
-    index += 1
-
-print('--------------------')
-
-order = int(input('メニューの番号を入力してください: '))
-selected_menu = menu_items[order]
-print('選択されたメニュー: ' + selected_menu.name)
-
-# コンソールから入力を受け取り、変数 count に代入してください
-count = int(input('個数を入力してください(3つ以上で1割引): '))
-
-# get_total_price メソッドを呼び出してください
-result = selected_menu.get_total_price(count)
-
-# 「 合計は〇〇円です 」となるように出力してください
-print(selected_menu.name + str(count) + '個で、合計は'+ str(result) + '円です')
+# drink1 に対して info メソッドを呼び出して戻り値を出力してください
+print(drink1.info())
