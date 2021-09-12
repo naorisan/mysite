@@ -6,6 +6,6 @@ class Drink(MenuItem):
         super().__init__(name, price)
         self.amount = amount
 
-    # info メソッドを定義してください
+    # info メソッドを定義してください≈
     def info(self):
         return self.name + ': ¥' + str(self.price) + ' (' + str(self.amount) + 'mL)'
